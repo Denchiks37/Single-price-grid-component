@@ -1,0 +1,163 @@
+/* ## Colors
+
+### Primary
+
+- Cyan: hsl(179, 62%, 43%)
+- Bright Yellow: hsl(71, 73%, 54%)
+
+--Sub background #2bb3b0
+--text #99a7be
+--background #e6eff6
+### Neutral
+
+- Light Gray: hsl(204, 43%, 93%)
+- Grayish Blue: hsl(218, 22%, 67%) */
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  font-family: "Karla", sans-serif;
+  background-color: #e6eff6;
+  line-height: 1.5;
+}
+
+/* .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+.main {
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  width: 600px;
+  /* height: 500px; */
+  border-radius: 8px;
+}
+
+.info {
+  gap: 15px;
+  height: 220px;
+  padding: 38px 32px 0 32px;
+  grid-column: 1/-1;
+}
+
+.guarantee {
+  color: hsl(71, 73%, 54%);
+  font-weight: 700;
+  padding-bottom: 12px;
+}
+
+.description {
+  color: #99a7be;
+}
+
+.info h2 {
+  color: hsl(179, 62%, 43%);
+  font-weight: 700;
+  padding-bottom: 24px;
+}
+
+.two {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 600px;
+}
+
+.subscription {
+  display: flex;
+  flex-direction: column;
+  background-color: #2bb3b0;
+  color: #ffff;
+  width: 300px;
+  height: 250px;
+  padding: 40px;
+  border-bottom-left-radius: 10px;
+  gap: 10px;
+}
+
+.price {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.number {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.subscription h2 {
+  font-size: 16px;
+}
+
+.blur {
+  color: hsla(203, 44%, 93%, 0.433);
+}
+
+.access {
+  font-size: 14px;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: hsl(71, 73%, 54%);
+  color: #ffff;
+  border-radius: 5px;
+  font-size: 14px;
+  border: none;
+  font-weight: 700;
+  padding: 12px 24px;
+  cursor: pointer;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.why-us {
+  background-color: #4cbfbd;
+  width: 300px;
+  height: 250px;
+  padding: 40px;
+  border-bottom-right-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.advantages p {
+  padding: 2px 0;
+}
+
+.why-us h2 {
+  color: hsl(204, 43%, 93%);
+  font-size: 18px;
+}
+
+.why-us p {
+  color: #ffff;
+  font-size: 12px;
+}
+
+@media (max-width: 600px) {
+  .main {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
