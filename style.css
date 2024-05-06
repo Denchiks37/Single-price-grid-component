@@ -13,6 +13,14 @@
 - Light Gray: hsl(204, 43%, 93%)
 - Grayish Blue: hsl(218, 22%, 67%) */
 
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/
+
 * {
   box-sizing: border-box;
   padding: 0;
@@ -35,12 +43,6 @@ body {
   line-height: 1.5;
 }
 
-/* .container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-} */
-
 .main {
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
   background-color: #ffffff;
@@ -48,22 +50,29 @@ body {
   flex-direction: column;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 1fr);
-  width: 600px;
-  /* height: 500px; */
+  min-width: 600px;
   border-radius: 8px;
 }
 
 .info {
-  gap: 15px;
-  height: 220px;
-  padding: 38px 32px 0 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  max-width: 70ch;
+  padding: 48px;
   grid-column: 1/-1;
+}
+
+.title-guarantee {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 .guarantee {
   color: hsl(71, 73%, 54%);
   font-weight: 700;
-  padding-bottom: 12px;
+  font-size: 18px;
 }
 
 .description {
@@ -73,14 +82,14 @@ body {
 .info h2 {
   color: hsl(179, 62%, 43%);
   font-weight: 700;
-  padding-bottom: 24px;
+  padding-bottom: 4px;
 }
 
 .two {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  width: 600px;
+  width: 100%;
 }
 
 .subscription {
@@ -88,17 +97,16 @@ body {
   flex-direction: column;
   background-color: #2bb3b0;
   color: #ffff;
-  width: 300px;
-  height: 250px;
-  padding: 40px;
+  min-width: 50%;
+  padding: 32px 32px;
   border-bottom-left-radius: 10px;
-  gap: 10px;
+  gap: 12px;
 }
 
 .price {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 16px;
 }
 
 .number {
@@ -107,7 +115,7 @@ body {
 }
 
 .subscription h2 {
-  font-size: 16px;
+  font-size: 18px;
 }
 
 .blur {
@@ -115,7 +123,6 @@ body {
 }
 
 .access {
-  font-size: 14px;
   margin-bottom: 20px;
 }
 
@@ -126,34 +133,40 @@ body {
   font-size: 14px;
   border: none;
   font-weight: 700;
-  padding: 12px 24px;
+  padding: 16px;
+  max-width: 90%;
   cursor: pointer;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
 }
 
+.price-access {
+  display: flex;
+  flex-direction: column;
+}
+
 .why-us {
   background-color: #4cbfbd;
-  width: 300px;
-  height: 250px;
-  padding: 40px;
+  min-width: 50%;
+  padding: 32px 32px;
   border-bottom-right-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 24px;
 }
 
 .advantages p {
   padding: 2px 0;
+  line-height: 1.1;
 }
 
 .why-us h2 {
-  color: hsl(204, 43%, 93%);
-  font-size: 18px;
+  color: white;
+  font-size: 20px;
 }
 
 .why-us p {
-  color: #ffff;
-  font-size: 12px;
+  color: hsl(204, 43%, 93%);
+  font-size: 14px;
 }
 
 @media (max-width: 600px) {
