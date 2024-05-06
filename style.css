@@ -29,8 +29,8 @@ FONT SIZE SYSTEM (px)
 
 html,
 body {
-  height: 100%;
-  width: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
 }
 
 body {
@@ -48,8 +48,6 @@ body {
   background-color: #ffffff;
   display: flex;
   flex-direction: column;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(2, 1fr);
   min-width: 600px;
   border-radius: 8px;
 }
@@ -60,7 +58,6 @@ body {
   gap: 8px;
   max-width: 70ch;
   padding: 48px;
-  grid-column: 1/-1;
 }
 
 .title-guarantee {
@@ -136,7 +133,7 @@ body {
   padding: 16px;
   max-width: 90%;
   cursor: pointer;
-  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
 
 .price-access {
@@ -170,7 +167,30 @@ body {
 }
 
 @media (max-width: 600px) {
+  html,
+  body {
+    min-height: 100vh;
+    min-width: 100vw;
+  }
+
   .main {
-    grid-template-columns: repeat(3, 1fr);
+    flex-direction: column;
+    min-width: unset;
+    margin: 24px;
+  }
+  .two {
+    flex-direction: column;
+  }
+
+  .subscription {
+    border-radius: 0;
+  }
+
+  .why-us {
+    border-radius: 0 0 10px 10px;
+  }
+
+  .btn {
+    max-width: 250px;
   }
 }
